@@ -1,6 +1,6 @@
 import { getRandomNum } from '../lib.js';
 
-export default () => {
+const game = () => {
   const firstNum = getRandomNum(99) + 1;
   const secondNum = getRandomNum(99) + 1;
   const minNum = firstNum < secondNum ? firstNum : secondNum;
@@ -17,3 +17,5 @@ export default () => {
 
   return [`${firstNum} ${secondNum}`, maxDivisor];
 };
+
+export default game;

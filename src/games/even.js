@@ -1,8 +1,10 @@
 import { isEven, getRandomNum } from '../lib.js';
 
-export default () => {
+const game = () => {
   const number = getRandomNum();
   const correctAnswer = isEven(number) ? 'yes' : 'no';
 
   return [number, correctAnswer];
 };
+
+export default game;

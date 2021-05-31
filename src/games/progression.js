@@ -1,6 +1,6 @@
 import { getRandomNum } from '../lib.js';
 
-export default (randomLength = false, randomIncrement = true) => {
+const game = (randomLength = false, randomIncrement = true) => {
   let length = 10;
   let increment = 2;
 
@@ -25,3 +25,5 @@ export default (randomLength = false, randomIncrement = true) => {
 
   return [progression.join(' '), answer];
 };
+
+export default game;

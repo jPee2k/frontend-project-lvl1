@@ -1,6 +1,6 @@
 import { getRandomNum, getRandomMultiSign } from '../lib.js';
 
-export default () => {
+const game = () => {
   const firstNum = getRandomNum();
   const secondNum = getRandomNum();
   const multiSign = getRandomMultiSign();
@@ -24,3 +24,5 @@ export default () => {
 
   return [mathExample, correctAnswer];
 };
+
+export default game;

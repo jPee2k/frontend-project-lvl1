@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 
 export const isEven = (num) => num % 2 === 0;
+export const isNumber = (val) => (val >= 0 || val < 0);
 export const getRandomNum = (max = 100) => Math.floor(Math.random() * max);
 export const getRandomMultiSign = (max = 3) => {
   const randomNum = getRandomNum(max);
@@ -15,13 +16,11 @@ export const getRandomMultiSign = (max = 3) => {
   }
 };
 
-export const getAnswer = (answerType) => {
-  let gamerAnswer = '';
+export const getAnswer = () => {
+  let gamerAnswer = readlineSync.question('Your answer: ');
 
-  if (answerType === 'number') {
-    gamerAnswer = Number(readlineSync.question('Your answer: '));
-  } else if (answerType === 'string') {
-    gamerAnswer = String(readlineSync.question('Your answer: '));
+  if (isNumber(gamerAnswer)) {
+    gamerAnswer = Number(gamerAnswer);
   }
 
   return gamerAnswer;
