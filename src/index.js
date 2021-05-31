@@ -1,4 +1,5 @@
-import { getAnswer, checkAnswer, printQuestion, printCongrats } from './lib.js';
+import { getAnswer, checkAnswer } from './lib.js';
+import { printQuestion } from './cli.js';
 
 export default (gamerName, answerType, game) => {
   let counter = 0;
@@ -15,10 +16,5 @@ export default (gamerName, answerType, game) => {
     counter += 1;
   }
 
-  if (isCorrect) {
-    printCongrats(gamerName);
-    return true;
-  }
-
-  return false;
+  return isCorrect;
 };

@@ -39,15 +39,3 @@ export const checkAnswer = (gamerName, gamerAnswer, correctAnswer) => {
 
   return false;
 };
-
-export const printWelcome = () => {
-  console.log('Welcome to the Brain Games!');
-};
-
-export const printQuestion = (value) => {
-  console.log(`Question: ${value}`);
-};
-
-export const printCongrats = (gamerName) => {
-  console.log(`Congratulations, ${gamerName}!`);
-};
