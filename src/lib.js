@@ -15,31 +15,39 @@ export const getRandomMultiSign = (max = 3) => {
   }
 };
 
-export const getAnswer = (type) => {
-  let userAnswer = '';
+export const getAnswer = (answerType) => {
+  let gamerAnswer = '';
 
-  if (type === 'number') {
-    userAnswer = Number(readlineSync.question('Your answer: '));
-  } else if (type === 'string') {
-    userAnswer = String(readlineSync.question('Your answer: '));
+  if (answerType === 'number') {
+    gamerAnswer = Number(readlineSync.question('Your answer: '));
+  } else if (answerType === 'string') {
+    gamerAnswer = String(readlineSync.question('Your answer: '));
   }
 
-  return userAnswer;
+  return gamerAnswer;
 };
 
-export const checkAnswer = (name, userAnswer, correctAnswer) => {
-  if (correctAnswer === userAnswer) {
+export const checkAnswer = (gamerName, gamerAnswer, correctAnswer) => {
+  if (correctAnswer === gamerAnswer) {
     console.log('Correct!');
 
     return true;
   }
 
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  console.log(`Let's try again, ${name}!`);
+  console.log(`'${gamerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  console.log(`Let's try again, ${gamerName}!`);
 
   return false;
 };
 
-export const printQuestion = (math) => {
-  console.log(`Question: ${math}`);
+export const printWelcome = () => {
+  console.log('Welcome to the Brain Games!');
+};
+
+export const printQuestion = (value) => {
+  console.log(`Question: ${value}`);
+};
+
+export const printCongrats = (gamerName) => {
+  console.log(`Congratulations, ${gamerName}!`);
 };

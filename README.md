@@ -4,3 +4,4 @@
 ![GitHub Lint](https://github.com/jPee2k/frontend-project-lvl1/actions/workflows/github-lint.yml/badge.svg?branch=develop)
 
 [![asciicast](https://asciinema.org/a/fNZO3HiKXTkFsfWJpb7bBpkGO.svg)](https://asciinema.org/a/fNZO3HiKXTkFsfWJpb7bBpkGO)
+[![asciicast](https://asciinema.org/a/Xh5D5nqh7MEXse5Q1K8ykL6NM.svg)](https://asciinema.org/a/Xh5D5nqh7MEXse5Q1K8ykL6NM)

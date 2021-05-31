@@ -1,4 +1,4 @@
-import { isEven, getRandomNum } from './lib.js';
+import { isEven, getRandomNum } from '../lib.js';
 
 export default () => {
   const number = getRandomNum();

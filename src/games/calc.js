@@ -1,4 +1,4 @@
-import { getRandomNum, getRandomMultiSign } from './lib.js';
+import { getRandomNum, getRandomMultiSign } from '../lib.js';
 
 export default () => {
   const firstNum = getRandomNum();
