@@ -9,7 +9,7 @@ export const getName = (name = 'John') => {
     return gamerName;
   }
 
-  console.log(`Hello, I will call you ${name}`);
+  console.log(`Hello, I will call you ${name}.`);
   return name;
 };
 
