@@ -1,19 +1,15 @@
 import { getRandomNum } from '../lib.js';
 
+const getGcd = (a, b) => ((a % b) ? getGcd(b, a % b) : Math.abs(b));
+
 const game = () => {
-  const firstNum = getRandomNum(99) + 1;
-  const secondNum = getRandomNum(99) + 1;
-  const minNum = firstNum < secondNum ? firstNum : secondNum;
+  const minNum = 1;
+  const maxNum = 99;
 
-  let maxDivisor = 0;
+  const firstNum = getRandomNum(maxNum) + minNum;
+  const secondNum = getRandomNum(maxNum) + minNum;
 
-  for (let i = 0, divisor = 1; i < minNum; i += 1) {
-    if (firstNum % divisor === 0 && secondNum % divisor === 0) {
-      maxDivisor = divisor;
-    }
-
-    divisor += 1;
-  }
+  const maxDivisor = getGcd(firstNum, secondNum);
 
   return [`${firstNum} ${secondNum}`, maxDivisor];
 };
